@@ -7,10 +7,11 @@ import { useEffect } from 'react'
 import axios from 'axios'
 
 const App = () => {
+  const url = import.meta.env.VITE_SERVER_URL;
   const [books , setBooks] = useState([]);
     useEffect(()=>{
     const fetchthumbnails = async () =>{
-      const {data} = await axios.get("http://localhost:5000/getThumbnails");
+      const {data} = await axios.get(`${url}/getThumbnails`);
       setBooks(data);
       console.log(data);
       
