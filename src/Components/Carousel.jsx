@@ -3,7 +3,7 @@ import "../css/Carousel.css";
 import axios from "axios";
 
 const Carousel = ({ books }) => {
-  const url = import.meta.env.VITE_SERVER_URL;
+  const uri = import.meta.env.VITE_SERVER_URL;
   const itemsRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -53,7 +53,7 @@ const Carousel = ({ books }) => {
   async function handleDownload(id, title) {
     try {
       setDownloadingId(id); // show loader for this item
-      const response = await axios.get(`${url}/DownloadBook/${id}`, {responseType: "blob",});
+      const response = await axios.get(`${uri}/DownloadBook/${id}`, {responseType: "blob",});
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");
       link.href = url;
