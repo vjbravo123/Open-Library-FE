@@ -133,30 +133,26 @@ VITE_API_BASE_URL=https://your-backend-url.com/api
 ## 🗂 Project Structure
 
 ```
-/
+open-library/
+├── node_modules/
 ├── public/
-│   └── index.html
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   ├── assets/
-│   ├── styles/
+│   ├── Components/
+│   │   ├── Carousel.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── HeroSection.jsx
+│   │   └── css/
 │   ├── App.jsx
 │   └── main.jsx
 ├── .env
 ├── .gitignore
+├── eslint.config.js
+├── index.html
 ├── package.json
-├── vite.config.js
+├── package-lock.json
 ├── README.md
-└── LICENSE
-```
-
----
-
-## 📸 Usage & Screenshots
-
-*(Insert screenshots or GIFs of your app here — e.g. home page, carousel, book detail, mobile view)*
+└── vite.config.js
 
 ---
 
