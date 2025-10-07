@@ -1,0 +1,140 @@
+.row {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #e5e7eb;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  height: 370px;
+  gap: 10px; /* space between buttons and items */
+}
+
+.items {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.item {
+  width: 200px; /* fixed width for consistency */
+  flex-shrink: 0;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  height: 200px;
+  width: 134px;
+}
+
+.prev,
+.Next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.download {
+    background-color: #f1e5f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Jersey\ 15, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+.download:hover{
+  background-color: rgb(246, 205, 212);
+  transform: scale(1.1);
+  font-weight: 900;
+}
+
+/* Arrows */
+.line1,
+.line2,
+.line3,
+.line4 {
+  width: 20px;
+  height: 0;
+  border: 1px solid green;
+}
+
+.line1 {
+  transform: rotate(25deg);
+  margin-bottom: -10px;
+}
+
+.line2 {
+  transform: rotate(-25deg);
+}
+
+.line3 {
+  transform: rotate(25deg);
+  margin-bottom: 8px;
+}
+
+.line4 {
+  transform: rotate(-25deg);
+}
+
+/* Hover effect */
+.prev:hover .line1 {
+  transform: rotate(45deg);
+  margin-bottom: -15px;
+}
+
+.prev:hover .line2 {
+  transform: rotate(-45deg);
+}
+
+.Next:hover .line3 {
+  transform: rotate(45deg);
+  margin-bottom: 14px;
+}
+
+.Next:hover .line4 {
+  transform: rotate(-45deg);
+}
+
+/* Optional: hide scrollbar but still scrollable */
+.items::-webkit-scrollbar {
+  display: none;
+}
+
+.items {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

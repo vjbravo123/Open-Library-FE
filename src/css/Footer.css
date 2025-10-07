@@ -1,0 +1,148 @@
+.footer {
+  background-color: #001c30;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-about,
+.footer-links,
+.footer-newsletter {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.footer-about h2 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #3498db;
+}
+
+/* Links Section */
+.footer-links h3 {
+  margin-bottom: 10px;
+  color: #adff2f;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #adff2f;
+}
+
+/* Newsletter Section */
+.footer-newsletter h3 {
+  margin-bottom: 10px;
+  color: #adff2f;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  flex: 1;
+  outline: none;
+}
+
+.footer-newsletter button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #2b7fc1;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-about,
+.footer-links,
+.footer-newsletter {
+  flex: 1 1 185px;
+}
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0px; /* reduce gap between sections */
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+    gap: 10px; /* smaller gap between input and button */
+  }
+
+  .footer-newsletter input {
+    width: 100%;
+  }
+
+  .footer-newsletter button {
+    width: 100%;
+  }
+}
